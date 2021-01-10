@@ -17,7 +17,9 @@ npm run start
 ```
 
 compile:
+
 For windows, first set the icon attribute(the one under packagerConfig) in the package.json file to `assets/webmail-win.ico`
+
 For macos, the above mentioned attribute to `assets/webmail-mac.icns`
 
 The above step is required due to the way that electron forge works (:
