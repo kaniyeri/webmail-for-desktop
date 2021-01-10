@@ -34,13 +34,24 @@
   },
   "homepage": "https://github.com/electron/electron-quick-start#readme",
   "dependencies": {
+    "@electron-forge/maker-dmg": "^6.0.0-beta.54",
     "electron-cookies": "^1.1.0",
     "electron-squirrel-startup": "^1.0.0"
   },
   "config": {
     "forge": {
-      "packagerConfig": {},
+      "packagerConfig": {
+        "name": "webmail",
+        "icon": "assets/webmail-mac.icns"
+      },
       "makers": [
+        {
+          "name": "@electron-forge/maker-dmg",
+          "config": {
+            "name": "webmail",
+            "icon": "assets/webmail-mac.icns"
+          }
+        },
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
