@@ -42,8 +42,6 @@
     "forge": {
       "packagerConfig": {
         "name": "webmail",
-
-        // change this before making/packaging
         "icon": "assets/webmail-mac.icns"
       },
       "makers": [
@@ -60,12 +58,12 @@
             "name": "webmail"
           }
         },
-        // {
-        //   "name": "@electron-forge/maker-zip",
-        //   "platforms": [
-        //     "darwin"
-        //   ]
-        // },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
         {
           "name": "@electron-forge/maker-deb",
           "config": {}
