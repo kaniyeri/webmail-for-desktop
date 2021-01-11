@@ -20,6 +20,7 @@ function createWindow() {
     mainWindow.maximize();
   } else if (platform == 'darwin') {
     // add any mac specific things here
+  }
 
   // and load the index.html of the app.
   mainWindow.loadURL('https://webmail-sso.iitb.ac.in');
