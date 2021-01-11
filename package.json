@@ -1,5 +1,5 @@
 {
-  "name": "Webmail-for-Desktop",
+  "name": "webmail-for-desktop",
   "version": "1.0.0",
   "description": "Electron based website wrapper for IIT Bombay Webmail",
   "main": "main.js",
@@ -16,7 +16,7 @@
     "webmail",
     "desktop",
     "iitb",
-    "Roundcube",
+    "Roundcube"
   ],
   "author": "GitHub",
   "license": "CC0-1.0",
