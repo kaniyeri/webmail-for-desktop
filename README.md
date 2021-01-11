@@ -1,8 +1,27 @@
-# Webmail for Desktop!
+# Webmail for Desktop
 
-This is a desktop app that ports webmail to native the windows and mac environment!
+Electron based website wrapper for IIT Bombay Webmail.[https://webmail-sso.iitb.ac.in]  
 
-## Key commands
+
+**This is not an official implementation.**
+
+# Usage and Installation
+
+Download one of the release packages from the right, pertaining to your operating system. It will work natively, without any extra packages.
+
+## Building from source
+
+### Prerequisites 
+- Nodejs
+- Electron  
+
+
+To install prebuilt Electron binaries, use [`npm`](https://docs.npmjs.com/).
+```sh
+npm install electron --save-dev 
+```
+
+### Key commands
 
 Before running any of the following commands run(only once):
 
@@ -38,4 +57,4 @@ npm run make
 
 ## License
 
-[CC0 1.0 (Public Domain)](LICENSE.md)
+[GNU Affero General Public License v3.0](LICENSE)
