@@ -1,7 +1,7 @@
 {
-  "name": "electron-quick-start",
+  "name": "Webmail-for-Desktop",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "Electron based website wrapper for IIT Bombay Webmail",
   "main": "main.js",
   "scripts": {
     "start": "electron-forge start",
@@ -10,14 +10,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/electron/electron-quick-start.git"
+    "url": "git+https://github.com/kaniyeri/webmail-for-desktop.git"
   },
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "webmail",
+    "desktop",
+    "iitb",
+    "Roundcube",
   ],
   "author": "GitHub",
   "license": "CC0-1.0",
@@ -30,9 +29,9 @@
     "electron": "^11.1.1"
   },
   "bugs": {
-    "url": "https://github.com/electron/electron-quick-start/issues"
+    "url": "https://github.com/kaniyeri/webmail-for-desktop/issues"
   },
-  "homepage": "https://github.com/electron/electron-quick-start#readme",
+  "homepage": "https://github.com/kaniyeri/webmail-for-desktop#readme",
   "dependencies": {
     "@electron-forge/maker-dmg": "^6.0.0-beta.54",
     "electron-cookies": "^1.1.0",
