@@ -41,35 +41,63 @@
     "forge": {
       "packagerConfig": {
         "name": "webmail",
-        "icon": "assets/webmail-mac.icns"
+        "icon": "assets/webmail-win.ico",
+        "platforms": [
+          "darwin",
+          "win32"
+        ]
       },
       "makers": [
         {
           "name": "@electron-forge/maker-dmg",
+          "platforms": [
+            "darwin",
+            "win32"
+          ],
           "config": {
             "name": "webmail",
-            "icon": "assets/webmail-mac.icns"
+            "icon": "assets/webmail-win.ico"
           }
         },
         {
           "name": "@electron-forge/maker-squirrel",
+          "platforms": [
+            "darwin",
+            "win32"
+          ],
           "config": {
-            "name": "webmail"
+            "name": "webmail",
+            "icon": "assets/webmail-win.ico"
           }
         },
         {
           "name": "@electron-forge/maker-zip",
           "platforms": [
-            "darwin"
-          ]
+            "darwin",
+            "win32"
+          ],
+          "config": {
+            "name": "webmail",
+            "icon": "assets/webmail-win.ico"
+          }
         },
         {
           "name": "@electron-forge/maker-deb",
-          "config": {}
+          "config": {
+            "name": "webmail",
+            "icon": "assets/webmail-win.ico"
+          }
         },
         {
           "name": "@electron-forge/maker-rpm",
-          "config": {}
+          "platforms": [
+            "darwin",
+            "win32"
+          ],
+          "config": {
+            "name": "webmail",
+            "icon": "assets/webmail-win.ico"
+          }
         }
       ]
     }
