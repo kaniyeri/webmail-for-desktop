@@ -45,13 +45,6 @@
       },
       "makers": [
         {
-          "name": "@electron-forge/maker-dmg",
-          "config": {
-            "name": "webmail",
-            "icon": "assets/webmail-mac.icns"
-          }
-        },
-        {
           "name": "@electron-forge/maker-squirrel",
           "config": {
             "name": "webmail",
