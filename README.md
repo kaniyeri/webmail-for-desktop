@@ -46,7 +46,7 @@ The above step is required due to the way that electron forge works (:
 then, compile package using:
 
 ```bash
-npm run pacakge
+npm run package
 ```
 
 and make with:
