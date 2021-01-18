@@ -31,26 +31,24 @@
   },
   "homepage": "https://github.com/kaniyeri/webmail-for-desktop#readme",
   "dependencies": {
-    "@electron-forge/maker-dmg": "^6.0.0-beta.54",
     "electron-cookies": "^1.1.0",
     "electron-squirrel-startup": "^1.0.0"
   },
   "config": {
     "forge": {
+      "make_targets": {
+        "win32": [
+          "squirrel"
+        ]
+      },
       "packagerConfig": {
         "name": "webmail",
-        "icon": "assets/webmail-win"
+        "icon": "assets/webmail-win.ico",
+        "platform": "win32"
       },
       "makers": [
         {
-          "name": "@electron-forge/maker-squirrel",
-          "config": {
-            "name": "webmail",
-            "iconUrl": "assets/webmail-win"
-          }
-        },
-        {
-          "name": "@electron-forge/maker-zip"
+          "name": "@electron-forge/maker-squirrel"
         }
       ]
     }
