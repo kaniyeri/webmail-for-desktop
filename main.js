@@ -7,8 +7,8 @@ function createWindow() {
   const { width, height } = screen.getPrimaryDisplay().workAreaSize;
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: width * 0.5,
-    height: height * 0.5,
+    width: width * 0.7,
+    height: height * 0.75,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
     },
@@ -17,7 +17,6 @@ function createWindow() {
   const platform = os.platform();
   if (platform == 'win32') {
     // add any windows specific things here
-    mainWindow.maximize();
   } else if (platform == 'darwin') {
     // add any mac specific things here
   }
