@@ -58,3 +58,6 @@ npm run make
 ## License
 
 [GNU Affero General Public License v3.0](LICENSE)
+
+## Contribution
+Thanks to [Jujhaar Singh](https://github.com/jujhaar2409) for providing MacOS builds, fixing screen sizes and adding icons!
