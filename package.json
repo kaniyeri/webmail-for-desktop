@@ -22,6 +22,7 @@
   "license": "CC0-1.0",
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-dmg": "^6.0.0-beta.54",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
     "@electron-forge/maker-zip": "^6.0.0-beta.54",
     "electron": "^11.1.1"
@@ -39,16 +40,33 @@
       "make_targets": {
         "win32": [
           "squirrel"
+        ],
+        "darwin": [
+          "dmg"
         ]
       },
       "packagerConfig": {
         "name": "webmail",
-        "icon": "assets/webmail-win.ico",
-        "platform": "win32"
+        "icon": "assets/webmail-icon",
+        "platform": [
+          "win32",
+          "darwin"
+        ]
       },
       "makers": [
         {
-          "name": "@electron-forge/maker-squirrel"
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "webmail-win-installer",
+            "setupIcon": "assets/webmail-icon.ico"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-dmg",
+          "config": {
+            "name": "webmail-mac-installer",
+            "icon": "assets/webmail-icon.icns"
+          }
         }
       ]
     }
