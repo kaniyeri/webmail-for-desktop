@@ -22,10 +22,8 @@
   "license": "CC0-1.0",
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.54",
-    "@electron-forge/maker-deb": "^6.0.0-beta.54",
-    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-dmg": "^6.0.0-beta.54",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
-    "@electron-forge/maker-zip": "^6.0.0-beta.54",
     "electron": "^11.1.1"
   },
   "bugs": {
@@ -33,70 +31,40 @@
   },
   "homepage": "https://github.com/kaniyeri/webmail-for-desktop#readme",
   "dependencies": {
-    "@electron-forge/maker-dmg": "^6.0.0-beta.54",
     "electron-cookies": "^1.1.0",
     "electron-squirrel-startup": "^1.0.0"
   },
   "config": {
     "forge": {
+      "make_targets": {
+        "win32": [
+          "squirrel"
+        ],
+        "darwin": [
+          "dmg"
+        ]
+      },
       "packagerConfig": {
         "name": "webmail",
-        "icon": "assets/webmail-win.ico",
-        "platforms": [
-          "darwin",
-          "win32"
+        "icon": "assets/webmail-icon",
+        "platform": [
+          "win32",
+          "darwin"
         ]
       },
       "makers": [
         {
-          "name": "@electron-forge/maker-dmg",
-          "platforms": [
-            "darwin",
-            "win32"
-          ],
-          "config": {
-            "name": "webmail",
-            "icon": "assets/webmail-win.ico"
-          }
-        },
-        {
           "name": "@electron-forge/maker-squirrel",
-          "platforms": [
-            "darwin",
-            "win32"
-          ],
           "config": {
-            "name": "webmail",
-            "icon": "assets/webmail-win.ico"
+            "name": "webmail-win-installer",
+            "setupIcon": "assets/webmail-icon.ico"
           }
         },
         {
-          "name": "@electron-forge/maker-zip",
-          "platforms": [
-            "darwin",
-            "win32"
-          ],
+          "name": "@electron-forge/maker-dmg",
           "config": {
-            "name": "webmail",
-            "icon": "assets/webmail-win.ico"
-          }
-        },
-        {
-          "name": "@electron-forge/maker-deb",
-          "config": {
-            "name": "webmail",
-            "icon": "assets/webmail-win.ico"
-          }
-        },
-        {
-          "name": "@electron-forge/maker-rpm",
-          "platforms": [
-            "darwin",
-            "win32"
-          ],
-          "config": {
-            "name": "webmail",
-            "icon": "assets/webmail-win.ico"
+            "name": "webmail-mac-installer",
+            "icon": "assets/webmail-icon.icns"
           }
         }
       ]
